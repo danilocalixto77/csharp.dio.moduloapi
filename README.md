@@ -21,11 +21,13 @@
       - Cria-se uma nova classe como o nome UsuarioController.cs
       - Esta classe irá herdar de ControllerBase
       - Importar: using Microsoft.AspNetCore.Mvc;
-      - Inserir entre couchetes acima da declaração da classe:
+      - Inserir entre colchetes acima da declaração da classe:
         - [ApiController]
         - [Route("controller")]
       - Controller criada, agora deve-se criar um método para que ela execute alguma ação.  	
         - Exemplo: ObterDataHora
-        - Declarar entre couchetes acima do método o endpoint que chamará este método na url da API.
+        - Declarar entre colchetes acima do método o endpoint que chamará este método na url da API.
         - [HttpGet("ObterDataHoraAtual")] 
+        - É uma local de acesso para a API.
+
       

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7vWdnDC62uYniasBfj8knkPy0tDD+BllZ8nR64AuoqG5/Z6SDFuZ6tuTL5kRhaso8394YfWxdHBhk4TwURcIFA==",
+  "dgSpecHash": "Y7bWeePGmT4MWVmruPG0db09e0m3s+nuRHSmRMesqKmTP3jIOJSwlcj2HCX9EpWNHvC7VfbCUfqoUYOILZbbzg==",
   "success": true,
-  "projectFilePath": "c:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj",
+  "projectFilePath": "C:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Danilo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "C:\\Users\\Danilo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
