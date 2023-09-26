@@ -23,7 +23,9 @@ namespace ModuloAPI.Controllers
         {
             _context.Add(contato);
             _context.SaveChanges();
-            return Ok(contato);
+            //return Ok(contato);
+            //Alterado para o Método CreatedAtAction, esse método irá além de criar, em seguida fornecer um link para acesso ao resgistro crido, pelo endpoint indicado.
+            return CreatedAtAction(nameof(ObterPorId), new { id = contato.Id }, contato);
         }
 
         [HttpGet("{id}")]
