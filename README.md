@@ -1,16 +1,59 @@
 # Introdução as APIs com C#
 
-- Criando nossa API
-  - Criar uma pasta para o projeto:
-    - Exemplo: c:\projetos\ModuloAPI
-  - Criar o projeto:
-    - dotnet new webapi
-  - Executar API:
-    - dotnet watch run
-    - Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
-  - Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
-  - Swagger: Uma ferramenta de documentação da API. 
-  - Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
+## Introdução as API's
+
+  - Introdução
+    > Objetivo desenvolver uma API integrada com Entity Framework
+
+  - O que é uma API
+    > API : Application Programming Interface, é uma forma de comunicação entre programas. Um software que se comunica com um outro software. Ou seja faz uma integração entre sistemas.
+
+  - API de feriados
+    > Exeplos de API:
+      - Nager.Date : https://date.nager.at
+      - Dogs: https://dog.ceo/dog-api
+  
+  - Documentação e retornos
+    > 
+
+  - Exemplo de uso
+  - Usando o Dog API
+  - Criando nossa API
+    > Criar uma pasta para o projeto:
+      - Exemplo: c:\projetos\ModuloAPI
+
+    > Criar o projeto:
+      ```
+        dotnet new webapi
+      ```
+    > Executar API:
+      ```
+        dotnet watch run
+      ```
+    
+      > Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
+ 
+      > Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
+  
+      > Swagger: Uma ferramenta de documentação da API. 
+   
+      > Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
+
+
+
+  - Criando a controller
+  - Entendendo as rotas
+  - Endpoint com parâmetro
+  - Encerramento
+
+## Materiais de apoio e Questionário
+
+  - Materiais de apoio
+  - Certifique seu conhecimento
+ 
+
+
+
 
 - Criando a Controller
   - A Controller é uma classe que vai agrupar suas requisições http e disponibilizar os endpoints.
@@ -30,6 +73,8 @@
         - [HttpGet("ObterDataHoraAtual")] 
         - É uma local de acesso para a API.
 
+---
+---
 ---
 
 # Trabalhando com Entity Framework com C#

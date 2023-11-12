@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj": {}
+    "C:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj": {}
   },
   "projects": {
-    "c:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj": {
+    "C:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj",
+        "projectUniqueName": "C:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj",
         "projectName": "ModuloAPI",
-        "projectPath": "c:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj",
+        "projectPath": "C:\\Projetos\\CSharp\\dio\\ModuloAPI\\ModuloAPI.csproj",
         "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
-        "outputPath": "c:\\Projetos\\CSharp\\dio\\ModuloAPI\\obj\\",
+        "outputPath": "C:\\Projetos\\CSharp\\dio\\ModuloAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
