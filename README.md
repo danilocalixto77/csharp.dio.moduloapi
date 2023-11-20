@@ -35,18 +35,40 @@
       ```
       dotnet watch run
       ```
-    
-      > Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
+    > Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
  
-      > Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
+    > Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
   
-      > Swagger: Uma ferramenta de documentação da API. 
+    > Swagger: Uma ferramenta de documentação da API. 
    
-      > Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
+    > Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
 
+    > Contudo temos uma API template padrão de quando se cria um projeto no dotnet.
 
+    > A seguir teremos o passo a passo para a criação da API.
 
   - Criando a controller
+    > Ao criar a API pelo dotnet note que é criado uma pasta chamada **Controllers**.
+ 
+    > Dentro desta pasta irão ficar classes controllers.
+
+    > Essas pasta representa um agrupamento de classes, nas quais essas classes deverão ser específicar e especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
+
+    > E uma controller possui alguns atributos específicos:
+      - Herdar de **ControllerBase**
+      - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
+
+    > A classe de uma controller deve herdar por padrão de: **ControllerBase**
+      ```
+      public class UsuarioController : **ControllerBase**
+      {
+
+      }
+      ```
+
+      > Em seguida declarar o uso : **using Microsoft.AspNetCore.Mvc**;
+
+
   - Entendendo as rotas
   - Endpoint com parâmetro
   - Encerramento
