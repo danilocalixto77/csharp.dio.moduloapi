@@ -60,13 +60,35 @@
 
     > A classe de uma controller deve herdar por padrão de: **ControllerBase**
       ```
+      [ApiController]  
+      [Route("[controller]")]
       public class UsuarioController : **ControllerBase**
       {
 
       }
       ```
-
       > Em seguida declarar o uso : **using Microsoft.AspNetCore.Mvc**;
+
+      > Desta forma já temos a nossa controller, entretanto ela não faz nada, é necessário definir alguma função para ela, portanto, vamos criar um método dentro da nossa classe controller.
+
+      > Criando uma classe para retornar data e hora:
+        ```
+        [HttpGet("ObterDataHoraAtual")]
+        public IActionResult ObterDataHora()
+        {
+            var obj = new
+            {
+                Data = DateTime.Now.ToLongDateString(),
+                Hora = DateTime.Now.ToShortTimeString()
+            };
+            return Ok(obj);
+        }
+        ```
+      > Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
+   
+
+
+
 
 
   - Entendendo as rotas
