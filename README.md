@@ -73,6 +73,7 @@
       > Desta forma já temos a nossa controller, entretanto ela não faz nada, é necessário definir alguma função para ela, portanto, vamos criar um método dentro da nossa classe controller.
 
       > Criando uma classe para retornar data e hora:
+
         ```
         [HttpGet("ObterDataHoraAtual")]
         public IActionResult ObterDataHora()
