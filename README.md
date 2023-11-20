@@ -14,21 +14,26 @@
       - Dogs: https://dog.ceo/dog-api
   
   - Documentação e retornos
-    > 
+    > É a maneira na qual a API informa quais parâmetros que os endpoints da API necessitam para processar determinada informação bem como os respectivos retornos esperados. Tudo isso será definido na documentação. Possibilitando assim o consumo da API.
 
   - Exemplo de uso
+    > Uma empresa de e-commerce emite uma nota, que dispara através de uma API a informação para transportadora, notificando que terá mercadorias com quantidade X de volumes e tal peso estimado para recolher da empresa de e-commerce.
+
+    > Uma API também pode ser consumida internamente em uma mesma empresa que necessita buscar e retornar informações entre sistemas de uma mesma empresa.
+
   - Usando o Dog API
+
   - Criando nossa API
     > Criar uma pasta para o projeto:
       - Exemplo: c:\projetos\ModuloAPI
 
     > Criar o projeto:
       ```
-        dotnet new webapi
+      dotnet new webapi
       ```
     > Executar API:
       ```
-        dotnet watch run
+      dotnet watch run
       ```
     
       > Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
