@@ -58,11 +58,12 @@
       - Herdar de **ControllerBase**
       - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
 
+
     > A classe de uma controller deve herdar por padrão de: **ControllerBase**
       ```
       [ApiController]  
       [Route("[controller]")]
-      public class UsuarioController : **ControllerBase**
+      public class UsuarioController : ControllerBase
       {
 
       }
@@ -84,6 +85,7 @@
             return Ok(obj);
         }
         ```
+
       > Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
    
 
