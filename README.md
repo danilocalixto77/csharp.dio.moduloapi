@@ -70,8 +70,8 @@
   - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
 
 
-  A classe de uma controller deve herdar por padrão de: 
-  **ControllerBase**
+  A classe de uma controller deve herdar por padrão de: **ControllerBase**
+
   ```
   [ApiController]  
   [Route("[controller]")]
@@ -98,15 +98,10 @@
     };
     return Ok(obj);
   }
-    ```
+  ```
 
   Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
    
-
-
-
-
-
 ### Entendendo as rotas
 
 ### Endpoint com parâmetro
@@ -117,10 +112,6 @@
 
   - Materiais de apoio
   - Certifique seu conhecimento
- 
-
-
-
 
 - Criando a Controller
   - A Controller é uma classe que vai agrupar suas requisições http e disponibilizar os endpoints.
