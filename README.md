@@ -2,64 +2,72 @@
 
 ## Introdução as API's
 
-  - Introdução
-    > Objetivo desenvolver uma API integrada com Entity Framework
+### Introdução
+    
+    Objetivo desenvolver uma API integrada com Entity Framework
 
-  - O que é uma API
-    > API : Application Programming Interface, é uma forma de comunicação entre programas. Um software que se comunica com um outro software. Ou seja faz uma integração entre sistemas.
+### O que é uma API
 
-  - API de feriados
-    > Exeplos de API:
-      - Nager.Date : https://date.nager.at
-      - Dogs: https://dog.ceo/dog-api
+    API : Application Programming Interface, é uma forma de comunicação entre programas. Um software que se comunica com um outro software. Ou seja faz uma integração entre sistemas.
+
+    API de feriados
+
+    Exeplos de API:
+    - Nager.Date : https://date.nager.at
+    - Dogs: https://dog.ceo/dog-api
   
-  - Documentação e retornos
-    > É a maneira na qual a API informa quais parâmetros que os endpoints da API necessitam para processar determinada informação bem como os respectivos retornos esperados. Tudo isso será definido na documentação. Possibilitando assim o consumo da API.
+### Documentação e retornos
+    
+    É a maneira na qual a API informa quais parâmetros que os endpoints da API necessitam para processar determinada informação bem como os respectivos retornos esperados. Tudo isso será definido na documentação. Possibilitando assim o consumo da API.
 
-  - Exemplo de uso
-    > Uma empresa de e-commerce emite uma nota, que dispara através de uma API a informação para transportadora, notificando que terá mercadorias com quantidade X de volumes e tal peso estimado para recolher da empresa de e-commerce.
+### Exemplo de uso
+    
+    Uma empresa de e-commerce emite uma nota, que dispara através de uma API a informação para transportadora, notificando que terá mercadorias com quantidade X de volumes e tal peso estimado para recolher da empresa de e-commerce.
 
-    > Uma API também pode ser consumida internamente em uma mesma empresa que necessita buscar e retornar informações entre sistemas de uma mesma empresa.
+    Uma API também pode ser consumida internamente em uma mesma empresa que necessita buscar e retornar informações entre sistemas de uma mesma empresa.
 
-  - Usando o Dog API
+### Usando o Dog API
 
-  - Criando nossa API
-    > Criar uma pasta para o projeto:
-      - Exemplo: c:\projetos\ModuloAPI
+ 
+### Criando nossa API
+    
+    Criar uma pasta para o projeto:
+    Exemplo: **c:\projetos\ModuloAPI**
 
-    > Criar o projeto:
+    Criar o projeto:
       ```
       dotnet new webapi
       ```
-    > Executar API:
+    Executar API:
       ```
       dotnet watch run
       ```
-    > Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
+    Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
  
-    > Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
+    Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
   
-    > Swagger: Uma ferramenta de documentação da API. 
+    Swagger: Uma ferramenta de documentação da API. 
    
-    > Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
+    Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
 
-    > Contudo temos uma API template padrão de quando se cria um projeto no dotnet.
+    Contudo temos uma API template padrão de quando se cria um projeto no dotnet.
 
-    > A seguir teremos o passo a passo para a criação da API.
+    A seguir teremos o passo a passo para a criação da API.
 
-  - Criando a controller
-    > Ao criar a API pelo dotnet note que é criado uma pasta chamada **Controllers**.
+### Criando a controller
+    
+    Ao criar a API pelo dotnet note que é criado uma pasta chamada **Controllers**.
  
-    > Dentro desta pasta irão ficar classes controllers.
+    Dentro desta pasta irão ficar classes controllers.
 
-    > Essas pasta representa um agrupamento de classes, nas quais essas classes deverão ser específicar e especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
+    Essas pasta representa um agrupamento de classes, nas quais essas classes deverão ser específicar e especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
 
-    > E uma controller possui alguns atributos específicos:
-      - Herdar de **ControllerBase**
-      - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
+    E uma controller possui alguns atributos específicos:
+    - Herdar de **ControllerBase**
+    - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
 
 
-    > A classe de uma controller deve herdar por padrão de: **ControllerBase**
+    A classe de uma controller deve herdar por padrão de: **ControllerBase**
       ```
       [ApiController]  
       [Route("[controller]")]
@@ -68,11 +76,11 @@
 
       }
       ```
-    > Em seguida declarar o uso : **using Microsoft.AspNetCore.Mvc**;
+    Em seguida declarar o uso : **using Microsoft.AspNetCore.Mvc**;
 
-    > Desta forma já temos a nossa controller, entretanto ela não faz nada, é necessário definir alguma função para ela, portanto, vamos criar um método dentro da nossa classe controller.
+    Desta forma já temos a nossa controller, entretanto ela não faz nada, é necessário definir alguma função para ela, portanto, vamos criar um método dentro da nossa classe controller.
 
-    > Criando um método para retornar data e hora:
+    Criando um método para retornar data e hora:
 
       ```
       [HttpGet("ObterDataHoraAtual")]
@@ -87,16 +95,18 @@
       }
       ```
 
-      > Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
+    Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
    
 
 
 
 
 
-  - Entendendo as rotas
-  - Endpoint com parâmetro
-  - Encerramento
+### Entendendo as rotas
+
+### Endpoint com parâmetro
+
+### Encerramento
 
 ## Materiais de apoio e Questionário
 
