@@ -46,58 +46,61 @@
 
   Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
  
-    Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
+  Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
   
-    Swagger: Uma ferramenta de documentação da API. 
+  Swagger: Uma ferramenta de documentação da API. 
    
-    Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
+  Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
 
-    Contudo temos uma API template padrão de quando se cria um projeto no dotnet.
+  Contudo temos uma API template padrão de quando se cria um projeto no dotnet.
 
-    A seguir teremos o passo a passo para a criação da API.
+  A seguir teremos o passo a passo para a criação da API.
 
 ### Criando a controller
     
-    Ao criar a API pelo dotnet note que é criado uma pasta chamada **Controllers**.
+  Ao criar a API pelo dotnet note que é criado uma pasta chamada **Controllers**.
  
-    Dentro desta pasta irão ficar classes controllers.
+  Dentro desta pasta irão ficar classes controllers.
 
-    Essas pasta representa um agrupamento de classes, nas quais essas classes deverão ser específicar e especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
+  Essas pasta representa um agrupamento de classes, nas quais essas classes deverão ser específicar e especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
 
-    E uma controller possui alguns atributos específicos:
-    - Herdar de **ControllerBase**
-    - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
+  E uma controller possui alguns atributos específicos:
+
+  - Herdar de **ControllerBase**
+  - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
 
 
-    A classe de uma controller deve herdar por padrão de: **ControllerBase**
-      ```
-      [ApiController]  
-      [Route("[controller]")]
-      public class UsuarioController : ControllerBase
-      {
+  A classe de uma controller deve herdar por padrão de: 
+  **ControllerBase**
+  ```
+  [ApiController]  
+  [Route("[controller]")]
+  public class UsuarioController : ControllerBase
+  {
 
-      }
-      ```
-    Em seguida declarar o uso : **using Microsoft.AspNetCore.Mvc**;
+  }
+  ```
 
-    Desta forma já temos a nossa controller, entretanto ela não faz nada, é necessário definir alguma função para ela, portanto, vamos criar um método dentro da nossa classe controller.
+  Em seguida declarar o uso : **using Microsoft.AspNetCore.Mvc**;
 
-    Criando um método para retornar data e hora:
+  Desta forma já temos a nossa controller, entretanto ela não faz nada, é necessário definir alguma função para ela, portanto, vamos criar um método dentro da nossa classe controller.
 
-      ```
-      [HttpGet("ObterDataHoraAtual")]
-      public IActionResult ObterDataHora()
-      {
-          var obj = new
-          {
-              Data = DateTime.Now.ToLongDateString(),
-              Hora = DateTime.Now.ToShortTimeString()
-          };
-          return Ok(obj);
-      }
-      ```
+  Criando um método para retornar data e hora:
 
-    Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
+  ```
+  [HttpGet("ObterDataHoraAtual")]
+  public IActionResult ObterDataHora()
+  {
+    var obj = new
+    {
+      Data = DateTime.Now.ToLongDateString(),
+      Hora = DateTime.Now.ToShortTimeString()
+    };
+    return Ok(obj);
+  }
+    ```
+
+  Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
    
 
 
