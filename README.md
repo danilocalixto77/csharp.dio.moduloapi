@@ -23,27 +23,28 @@
 
 ### Exemplo de uso
     
-    Uma empresa de e-commerce emite uma nota, que dispara através de uma API a informação para transportadora, notificando que terá mercadorias com quantidade X de volumes e tal peso estimado para recolher da empresa de e-commerce.
+  Uma empresa de e-commerce emite uma nota, que dispara através de uma API a informação para transportadora, notificando que terá mercadorias com quantidade X de volumes e tal peso estimado para recolher da empresa de e-commerce.
 
-    Uma API também pode ser consumida internamente em uma mesma empresa que necessita buscar e retornar informações entre sistemas de uma mesma empresa.
+  Uma API também pode ser consumida internamente em uma mesma empresa que necessita buscar e retornar informações entre sistemas de uma mesma empresa.
 
 ### Usando o Dog API
-
  
 ### Criando nossa API
     
-    Criar uma pasta para o projeto:
-    Exemplo: **c:\projetos\ModuloAPI**
+  Criar uma pasta para o projeto:
+  Exemplo: **c:\projetos\ModuloAPI**
 
-    Criar o projeto:
-      ```
-      dotnet new webapi
-      ```
-    Executar API:
-      ```
-      dotnet watch run
-      ```
-    Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
+  Criar o projeto:
+  ```
+  dotnet new webapi
+  ```
+
+  Executar API:
+  ```
+  dotnet watch run
+  ```
+
+  Obs: o "watch" na execução da API tem por função ficar observando a API e caso seja feita alguma mudança ele irá recompilar o projeto sem haver necessidade de pausar o mesmo.
  
     Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
   
