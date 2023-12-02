@@ -4,7 +4,7 @@
 
 ### Introdução
     
-    Objetivo desenvolver uma API integrada com Entity Framework
+  Objetivo desenvolver uma API integrada com Entity Framework
 
 ### O que é uma API
 
@@ -14,12 +14,12 @@
 
   Exeplos de API:
 
-    - Nager.Date : https://date.nager.at
-    - Dogs: https://dog.ceo/dog-api
+  - Nager.Date : https://date.nager.at
+  - Dogs: https://dog.ceo/dog-api
   
 ### Documentação e retornos
     
-    É a maneira na qual a API informa quais parâmetros que os endpoints da API necessitam para processar determinada informação bem como os respectivos retornos esperados. Tudo isso será definido na documentação. Possibilitando assim o consumo da API.
+  É a maneira na qual a API informa quais parâmetros que os endpoints da API necessitam para processar determinada informação bem como os respectivos retornos esperados. Tudo isso será definido na documentação. Possibilitando assim o consumo da API.
 
 ### Exemplo de uso
     
