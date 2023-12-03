@@ -176,15 +176,29 @@
 
   Com esta classe possibilita utilizarmos as quatro operações do CRUD.
 
+### Instalando pacotes
 
-- Instalando pacotes
-  - Para o funcionamento do Entity Framework devemos fazer a seguinte instalações a adições abaixo em nosso projeto. Algumas necessitam somente uma unica fez ser adicionada em nossa IDE/Projeto. Outras necessitam ser para cada projeto criado.
-    - Instalação/add única:
-      - dotnet tool install --global dotnet-ef
-    - Instalação/add por projeto:
-      - dotnet add packageMicrosoft.EntityFrameworkCore.Design
-      - dotnet add packageMicrosoft.EntityFrameworkCore.SqlServer   
-    - Para checar a instalação dos pacotes, ir no arquivo .csproj.
+  Para o funcionamento do Entity Framework devemos fazer a seguinte instalações a adições abaixo em nosso projeto. Algumas necessitam somente uma unica fez ser adicionada em nossa IDE/Projeto. Outras necessitam ser para cada projeto criado.
+
+  Instalação **única** a nível global desta ferramenta, via prompt do terminal DOS ou VSCode:
+  ```
+  dotnet tool install --global dotnet-ef
+  ```
+
+  Instalação por **projeto** os pacotes a seguir devem ser instalados sempre que iniciado um novo projeto do EF via prompt do terminal DOS ou VSCode:
+  ```
+  dotnet add packageMicrosoft.EntityFrameworkCore.Design
+
+  ```
+
+  ```
+  dotnet add packageMicrosoft.EntityFrameworkCore.SqlServer
+  ```
+
+  Para checar a instalação dos pacotes, ir no arquivo .csproj.
+
+
+
 - Criando a classe entidade
   - Criar uma pasta para a classes:
     - Exemplo : Entityes e uma classe Contatos com os atributos Id,Nome,Telefone,Ativo.
