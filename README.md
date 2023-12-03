@@ -160,6 +160,22 @@
 
 ### Entendendo o CRUD
 
+  **CRUD**: **C**REATE (Insert) **R**EAD (Select) **U**pdate (Update) **D**ELETE (Delete).
+
+  Com o EF é possível criarmos uma classe no projeto C# e esta classe criada poderá ser uma tabela no banco de dado.
+  Exemplo uma Classe: Contatos
+  ```
+  Contatos
+  ----------------
+  + Id: int
+  + Nome: string
+  + Telefone: string
+  + Ativo: bool
+  ----------------
+  ```
+
+  Com esta classe possibilita utilizarmos as quatro operações do CRUD.
+
 
 - Instalando pacotes
   - Para o funcionamento do Entity Framework devemos fazer a seguinte instalações a adições abaixo em nosso projeto. Algumas necessitam somente uma unica fez ser adicionada em nossa IDE/Projeto. Outras necessitam ser para cada projeto criado.
