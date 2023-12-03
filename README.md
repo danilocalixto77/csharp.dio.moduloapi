@@ -110,11 +110,11 @@
 
   As rotas dos são criadas com a seguinte formação:
 
-  1. O endereço de onde a API está sendo executada, que para o nosso exemplo é: **http://localhost:**
+  1. O endereço de onde a API está sendo executada, que para o nosso exemplo é: **http://localhost**
 
   2. Vem a porta que está sendo utilizada: **:5220**
 
-  3. O nome da controller par ao nosso caso é a classe UsuarioController.cs, em que automaticamente a parte do nome Controller.cs em diante é ignorada, sendo colocada na URL somente a parte: **/Usuario**
+  3. O nome da controller para o nosso caso é a classe UsuarioController.cs, em que automaticamente a parte do nome Controller.cs em diante é ignorada, sendo colocada na URL somente a parte: **/Usuario**
 
   4. E por fim o nome do endpoint declarado no método HttpGet  [HttpGet("ObterDataHoraAtual")], que fica: **/ObterDataHoraAtual**
 
@@ -126,36 +126,40 @@
 
 ### Endpoint com parâmetro
 
+  Segue exemplo abaixo:
+
+  ```
+  [HttpGet("Aprensentar/{nome}")]
+  public IActionResult Apresentar(string nome)
+  {
+    var menssagem = $"Olá {nome} seja bem vindo!";
+    return Ok(new { menssagem });
+  }
+
+  ```
+
 ### Encerramento
 
 ## Materiais de apoio e Questionário
 
-  - Materiais de apoio
-  - Certifique seu conhecimento
+### Materiais de apoio
 
-- Criando a Controller
-  - A Controller é uma classe que vai agrupar suas requisições http e disponibilizar os endpoints.
-  - Nesta classe deve-se agrupar classes e domínio em comum. 
-  - Exemplo: classe usuario
-    - Tudo relacionado ao usuário será feito dentro desta classe, pesquisr por id, nome, alterar, apagar.
-    - Criando uma UsuarioController.cs
-      - Cria-se uma nova classe como o nome UsuarioController.cs
-      - Esta classe irá herdar de ControllerBase
-      - Importar: using Microsoft.AspNetCore.Mvc;
-      - Inserir entre colchetes acima da declaração da classe:
-        - [ApiController]
-        - [Route("controller")]
-      - Controller criada, agora deve-se criar um método para que ela execute alguma ação.  	
-        - Exemplo: ObterDataHora
-        - Declarar entre colchetes acima do método o endpoint que chamará este método na url da API.
-        - [HttpGet("ObterDataHoraAtual")] 
-        - É uma local de acesso para a API.
+### Certifique seu conhecimento
 
 ---
 ---
 ---
 
 # Trabalhando com Entity Framework com C#
+
+## Entity Frmework e CRUD
+
+### Introdução
+
+  O EF é um framework **ORM** (Object-Relational Mapping) criado para facilitar a integração com bancos de dados. Mapeando tabelas e gerando comando SQL de forma automática.
+
+### Entendendo o CRUD
+
 
 - Instalando pacotes
   - Para o funcionamento do Entity Framework devemos fazer a seguinte instalações a adições abaixo em nosso projeto. Algumas necessitam somente uma unica fez ser adicionada em nossa IDE/Projeto. Outras necessitam ser para cada projeto criado.
