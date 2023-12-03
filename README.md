@@ -48,7 +48,7 @@
  
   Por padrão o .NET ao criar uma API ele irá direcionar para o Swagger.
   
-  Swagger: Uma ferramenta de documentação da API. 
+  **Swagger**: Uma ferramenta de documentação da API. 
    
   Entretanto isso não é uma obrigatoriedade para utilização da API a mesma pode ser consumida e aberta no navegador. Copiando o link do Swagger para outro navegador.
 
@@ -62,15 +62,19 @@
  
   Dentro desta pasta irão ficar classes controllers.
 
-  Essas pasta representa um agrupamento de classes, nas quais essas classes deverão ser específicar e especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
+  Essas pasta representa um agrupamento de classes, nas quais cada classe deverá ser especialista em determinada operação do sistema. Exemplo, de uma controller que irá controlar as previsões do tempo a WeatherForecastController.cs, uma controler para usuários seria UsuarioController.cs e assim por diante.
 
-  E uma controller possui alguns atributos específicos:
+  E uma controller nada mais é do que uma classe que vai agrupar as requisições http. E  irá disponibilizar os endpoints da API.
+
+  A nomenclatura para classe deverá ser: **NomeController.cs**	
+
+  O **Nome** dado a controller fará parte da URL de acesso a API.
 
   - Herdar de **ControllerBase**
   - Sobre a declaração da classe: **[ApiController] e [Route("[controller]")]**
 
-
   A classe de uma controller deve herdar por padrão de: **ControllerBase**
+
 
   ```
   [ApiController]  
@@ -103,6 +107,22 @@
   Acima do método declara-se o endpoint: **[HttpGet("ObterDataHoraAtual")]**      
    
 ### Entendendo as rotas
+
+  As rotas dos são criadas com a seguinte formação:
+
+  1. O endereço de onde a API está sendo executada, que para o nosso exemplo é: **http://localhost:**
+
+  2. Vem a porta que está sendo utilizada: **:5220**
+
+  3. O nome da controller par ao nosso caso é a classe UsuarioController.cs, em que automaticamente a parte do nome Controller.cs em diante é ignorada, sendo colocada na URL somente a parte: **/Usuario**
+
+  4. E por fim o nome do endpoint declarado no método HttpGet  [HttpGet("ObterDataHoraAtual")], que fica: **/ObterDataHoraAtual**
+
+  E temos ao final a formação da URL abaixo:
+	
+  ```
+  http://localhost:5220/Usuario/ObterDataHoraAtual
+  ```
 
 ### Endpoint com parâmetro
 
