@@ -187,15 +187,18 @@
 
   Instalação por **projeto** os pacotes a seguir devem ser instalados sempre que iniciado um novo projeto do EF via prompt do terminal DOS ou VSCode:
   ```
-  dotnet add packageMicrosoft.EntityFrameworkCore.Design
+  dotnet add package Microsoft.EntityFrameworkCore.Design
 
   ```
 
   ```
-  dotnet add packageMicrosoft.EntityFrameworkCore.SqlServer
+  dotnet add package Microsoft.EntityFrameworkCore.SqlServer
   ```
+
+  Os pacotes do EF são modulares para cada de é necessário instalar somente o pacote do bando que for trabalhar.
 
   Para checar a instalação dos pacotes, ir no arquivo .csproj.
+
 
 
 
