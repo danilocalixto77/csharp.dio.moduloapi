@@ -310,10 +310,20 @@
   JSON para modo produção o arquivo: **appsettings.json** 
 
   Exemplo de conexão para banco de dados SQL local:
-      - "ConnectionStrings": {"ConexaoPadrao": "Server=localhost\\SQLEXPRESSInitial Catalog=Agenda;Integrated Security=True"}
-     - Caso ocorra erro de SSL insira ao final da string: TrustServerCertificate=True	
-     - "ConnectionStrings": {"ConexaoPadrao": "Server=localhost\\SQLEXPRESS; Initial Catalog=Agenda;Integrated Security=True; TrustServerCertificate=True"}
 
+  ```
+  "ConnectionStrings": {
+    "ConexaoPadrao": "Server=localhost\\SQLEXPRESSInitial Catalog=Agenda;Integrated Security=True"
+  }
+  ```
+
+  Caso ocorra erro de SSL insira ao final da string: **TrustServerCertificate=True**
+
+  ```	
+  "ConnectionStrings": {
+    "ConexaoPadrao": "Server=localhost\\SQLEXPRESS; Initial Catalog=Agenda;Integrated Security=True; TrustServerCertificate=True"
+  }
+  ```
   - Arquivo Program.cs. Informar a string de conexão:
     - Iniciar com os imports:
       - using ModuloAPI.Context;
