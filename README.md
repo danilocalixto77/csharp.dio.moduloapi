@@ -352,9 +352,8 @@
 
   ```
 
+  Após a conclusão destes passo estará configurado para acessar o banco.
 
-    - builder.Services.AddDbContext<AgendaContext>(options =>
-  options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
 
 - Entendendo as migrations
   - Migrations são mapeamentos que o Entity faz das classes para a criação das entidades. E esse mapeamento e criação de tabelas devem ser feitas de maneira antecipada, e este procedimento são as migrations.
