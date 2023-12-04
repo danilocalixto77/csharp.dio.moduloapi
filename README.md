@@ -271,6 +271,35 @@
 
   ```
 
+  Nesta mesma classe Context deverá ser criado um construtor para definir a conexão com o nosso banco de dados. Inicalmente ficará vazio conforme exemplo abaixo:
+
+  ```
+  public class AgendaContext : DbContext
+  {
+      public AgendaContext(DbContextOptions<AgendaContext> options) : base(options)
+      {
+
+      }
+  }
+  ```
+
+  Em seguida inserir uma propriedade abaixo do construtor que refere-se a entidade, para nosso caso entidade é uma classe que também estamos nos referindo a uma tabela no BD SQL Server.
+
+  ```
+  public class AgendaContext : DbContext
+  {
+      public AgendaContext(DbContextOptions<AgendaContext> options) : base(options)
+      {
+
+      }
+
+      public DbSet<Contato> Contatos { get; set; }
+  }
+
+  ```
+
+  O **DbSet<Contato>** pois está representando uma classe no programa e uma tabela no banco de dados desta forma sendo uma **entidade*.
+
 
 
 
