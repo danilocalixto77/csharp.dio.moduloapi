@@ -298,25 +298,18 @@
 
   ```
 
-  O **DbSet<Contato>** pois está representando uma classe no programa e uma tabela no banco de dados desta forma sendo uma **entidade*.
+  O **DbSet<Contato>** pois está representando uma classe no programa e uma tabela no banco de dados desta forma sendo uma **entidade**.
 
 
+### Configurando a conexão
 
+  Arquivo JSON. Criar strings de conexão:
 
+  JSON para modo desenvolvimento o arquivo: **appsettings.Development.json**
 
- de construtor para conexão:
-      - public AgendaContext(DbContextOptions<AgendaContext> options) : base(options)
-        {
-        }
+  JSON para modo produção o arquivo: **appsettings.json** 
 
-    - Inserir uma propriedade que refere a entidade.  
-      - public DbSet<Contato> Contatos { get; set; }
-
-- Configurando a conexão
-  - Arquivo JSON. Criar strings de conexão:
-    - appsettings.Development.json (Configurações para modo desenvolvimento)
-    - appsettings.json (Configurações para modo produção)
-    - Exemplo de conexão para banco de dados SQL local:
+  Exemplo de conexão para banco de dados SQL local:
       - "ConnectionStrings": {"ConexaoPadrao": "Server=localhost\\SQLEXPRESSInitial Catalog=Agenda;Integrated Security=True"}
      - Caso ocorra erro de SSL insira ao final da string: TrustServerCertificate=True	
      - "ConnectionStrings": {"ConexaoPadrao": "Server=localhost\\SQLEXPRESS; Initial Catalog=Agenda;Integrated Security=True; TrustServerCertificate=True"}
