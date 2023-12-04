@@ -210,12 +210,26 @@
 
   Para checar a instalação dos pacotes, ir no arquivo .csproj.
 
+### Criando a classe entidade
+
+  Criar uma pasta específica para representar as classes que terão uma tabela a se relacionar no banco:
+  1. Crie a pasta Entityes.
+
+  ```
+  ..\Entityes
+
+  ```
+
+  2. Crie a classe na qual terá uma tabela no BD.
+
+  ```
+  ..\Entityes\Contatos.cs
+  ```
+  Todas as classes que tiverem uma tabela vinculada ao banco deverá ficar dentro desta pasta.
 
 
 
-- Criando a classe entidade
-  - Criar uma pasta para a classes:
-    - Exemplo : Entityes e uma classe Contatos com os atributos Id,Nome,Telefone,Ativo.
+
 - Criando o Contexto
   - Criar uma pasta e classe de Contexto.
     - Exemplo : Context e uma classe AgendaContext
