@@ -324,12 +324,35 @@
     "ConexaoPadrao": "Server=localhost\\SQLEXPRESS; Initial Catalog=Agenda;Integrated Security=True; TrustServerCertificate=True"
   }
   ```
-  - Arquivo Program.cs. Informar a string de conexão:
-    - Iniciar com os imports:
-      - using ModuloAPI.Context;
-      - using Microsoft.EntityFrameworkCore;
-    - Abaixo da área comentada inserir a conexão:
-    - // Add services to the container.
+
+  Após a conclusão da string de conexão, agora é o momento em que se deve informar ao programa para utiliza-la, que é feito da seguinte forma.
+
+  1. Vá até ao arquivo: **Program.cs**
+
+  2. Dentro do arquivo Program.cs faça as seguintes importações e declarações:
+
+  Importar:
+
+  ```
+  using ModuloAPI.Context;
+  using Microsoft.EntityFrameworkCore;
+  ```
+
+  3. Adicionar no começo do código podendo ser onde consta o comentário:
+
+  ```
+  // Add services to the container.
+  ```
+
+  O seguinte comando:
+
+  ```
+  builder.Services.AddDbContext<AgendaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+
+  ```
+
+
     - builder.Services.AddDbContext<AgendaContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
 
