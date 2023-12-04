@@ -227,13 +227,55 @@
   ```
   Todas as classes que tiverem uma tabela vinculada ao banco deverá ficar dentro desta pasta.
 
+  Criada a classe Contato.cs com os seguintes atributos:
+  ```
+  public class Contatos
+  {
+      public int Id { get; set; }
+      public string Nome { get; set; }
+      public string Telefone { get; set; }
+      public bool Ativo { get; set; }
+  }
+
+  ```
+
+### Criando o Contexto
+
+  O Contexto representará o nome do nosso banco de dados. E também fará a conexão com o BD. Siga os passos a seguir:
+
+  1. Crie a pasta Contexto ou Context. 
+
+  ```
+  ..\Context
+
+  ```
+
+  2. Crie a classe contexto que será o **nome** do BD. Para o nosso caso será **Agenda**. Logo a dentro da pasta Context deverá ser criado o arquivo AgendaContext.cs
+
+  ```
+  ..\Context\AgendaContext.cs
+  ```
+
+  Ao criar classe AgendaContext na sua declaração deverá ser colocado para herdar na declaração da classe : DbContext consequentemente fazer o import de: **Microsoft.EntityFrameworkCore**. Observe se o editor fez a importação caso não tenha feito certifique-se de fazer:
+
+  ```
+  using Microsoft.EntityFrameworkCore;
+
+  namespace ModuloAPIb.Context
+  {
+      public class AgendaContext : DbContext
+      {
+         
+      }
+  }
+
+  ```
 
 
 
-- Criando o Contexto
-  - Criar uma pasta e classe de Contexto.
-    - Exemplo : Context e uma classe AgendaContext
-    - Criar classe construtor para conexão:
+
+
+ de construtor para conexão:
       - public AgendaContext(DbContextOptions<AgendaContext> options) : base(options)
         {
         }
