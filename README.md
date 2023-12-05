@@ -382,9 +382,56 @@
 
 ### Criando a controle e o endpoint de Create
 
-  - Criar a classe dentro da pasta Controller:
-    - ContatoController.cs
-    - Desenvolvido o método de de inserção/criação(create)
+  Criando classe Controller para contato, vá na pasta Controller e crie a classe chamada:
+
+  ```
+  ContatoController.cs
+  ```
+
+  Abaixo o a classe inicial com os comando que indicam uma classe Controller:
+  1. [ApiController]
+  
+  2. [Route("[controller]")]
+
+  3. public class ContatoController : **ControllerBase**
+
+  4. Observar o import: **using Microsoft.AspNetCore.Mvc;**
+  
+
+  ```
+  using Microsoft.AspNetCore.Mvc;
+
+  [ApiController]
+  [Route("[controller]")]
+  public class ContatoController : ControllerBase
+  {
+
+
+  }
+  ```
+
+  Criando método Create, para iniciarmos inserindo dados na tabela contato.
+
+  ```
+  public class ContatoController : ControllerBase
+  {
+
+    public IActionResult Create(Contato contato)
+    {
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
 
 - Criando o endpoint obter por ID
   - Inserir na classe ContatoController o método(endpoint) para consultar pelo id do contato.
