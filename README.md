@@ -377,7 +377,7 @@
   dotnet-ef database update
   ```
   
-  Após o comando acima foi criado o banco de dados **Agenda** e a tabela **Contatos** com todos os campos e tipos de acordo com a classe Contato.cs. Tudo através do EntityFrame Work.
+  Após o comando acima foi criado o banco de dados **Agenda** e a tabela **Contatos** com todos os campos e tipos de acordo com a classe Contato.cs. Tudo através do Entity Framework.
 
 
 ### Criando a controle e o endpoint de Create
@@ -412,6 +412,16 @@
   - PATCH 	: Update/Modify Retornos: 405/200/409
     - Atualização de dados. Este verbo permite atualizar toda atributos específicos da entidade.      - DELETE	: Delete        Retornos: 405/200/404
     - Apaga/Deleta um atributo/recurso.
+
+
+### Atribuição das Pastas no projeto:
+
+  **Context**: armazena a classe responsável pela criação do contexto ou banco de dados.
+
+  **Controllers**: armazena as classes controladoras que terão os atributos e métodos que serão responsáveis pela criação e também controle das ações e requisições a serem feitas pelos endpoints da API.
+
+  **Migrations**: armazena os arquivos responsáveis pelas instruções SQL para o banco de dados, CRUD.
+
 
 
       
