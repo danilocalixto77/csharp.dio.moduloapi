@@ -355,11 +355,17 @@
   Após a conclusão destes passo estará configurado para acessar o banco.
 
 
-- Entendendo as migrations
-  - Migrations são mapeamentos que o Entity faz das classes para a criação das entidades. E esse mapeamento e criação de tabelas devem ser feitas de maneira antecipada, e este procedimento são as migrations.
-  - Comando para criação da Migration:
-  - dotnet-ef migrations add CriacaoTabelaContato
-  - Após a execução será criada a pasta migrations caso ainda não exista, e criará as classes dentro dessa pasta que irá criar tabelas e campos. Entretanto até este momento as classes foram criadas, mas as entidades e atributos ainda não foram criadas na base de dados.
+### Entendendo as migrations
+  
+  Migrations são mapeamentos que o Entity faz das classes para a criação das entidades/tabelas. E esse mapeamento e criação de tabelas devem ser feitas de maneira antecipada, e este procedimento são as migrations.
+
+  Verifique se o SQL está sendo executado e com o serviço funcionando. Após essa checagem executar o comando para criação da Migration:
+  
+  ```
+  dotnet-ef migrations add CriacaoTabelaContato
+  ```
+
+  Após a execução será criada a pasta migrations caso ainda não exista, e criará as classes dentro dessa pasta que irá criar tabelas e campos. Entretanto até este momento as classes foram criadas, mas as entidades e atributos ainda não foram criadas na base de dados.
   - Para de fato a criação ser executada, deve-se executar o seguinte comando:
     - dotnet-ef database update
 
