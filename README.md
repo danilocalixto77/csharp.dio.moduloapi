@@ -376,9 +376,12 @@
   ```
   dotnet-ef database update
   ```
+  
+  Após o comando acima foi criado o banco de dados **Agenda** e a tabela **Contatos** com todos os campos e tipos de acordo com a classe Contato.cs. Tudo através do EntityFrame Work.
 
 
-- Criando a controle e o endpoint de Create
+### Criando a controle e o endpoint de Create
+
   - Criar a classe dentro da pasta Controller:
     - ContatoController.cs
     - Desenvolvido o método de de inserção/criação(create)
