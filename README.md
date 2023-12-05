@@ -365,9 +365,18 @@
   dotnet-ef migrations add CriacaoTabelaContato
   ```
 
-  Após a execução será criada a pasta migrations caso ainda não exista, e criará as classes dentro dessa pasta que irá criar tabelas e campos. Entretanto até este momento as classes foram criadas, mas as entidades e atributos ainda não foram criadas na base de dados.
-  - Para de fato a criação ser executada, deve-se executar o seguinte comando:
-    - dotnet-ef database update
+  Após a execução será criada a pasta **Migrations** caso ainda não exista, e criará as classes dentro dessa pasta que irá criar tabelas e campos. Entretanto até este momento as classes foram criadas, mas as entidades e atributos ainda não foram criadas na base de dados.
+
+  ```
+  ..\Migrations
+  ```
+
+  Para de fato a criação ser aplicada no banco de dados, deve ser executar o seguinte comando:
+
+  ```
+  dotnet-ef database update
+  ```
+
 
 - Criando a controle e o endpoint de Create
   - Criar a classe dentro da pasta Controller:
