@@ -475,6 +475,14 @@
   }
   ```
 
+  Executando o projeto C#, procure no Swagger a controller e o endpoint para testar o método de inserção de contatos:
+
+  ```
+  dotnet watch run
+  ```
+
+
+
 
 
 
