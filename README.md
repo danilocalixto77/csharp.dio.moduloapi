@@ -542,11 +542,26 @@
   ```
 
 ### Criando o endpoint de obter por nome
-  - Inserir na classe ContatoController o método(endpoint) para consultar pelo nome do contato.
-  - [HttpGet("ObterPorNome")]
 
-- Entendendo os verbos HTTP
-  - POST 	: Create	Retornos: 201/404/409
+  Agora mais um método para agora pesquisar por **Nome**. Semelhantemente ao por Id.
+
+  ```
+  [HttpGet("PesquisaPorNome")]
+  public IActionResult PesquisaPorNome(string nome)
+  {
+    var contatos = _context.Contatos.Where(x => x.Nome.Contains(nome));
+    return Ok(contatos);
+  }
+  ```
+
+### Entendendo os verbos HTTP
+
+
+  |Http Verb | CRUD | Entire Collection | Specific item|
+  |----------|------|-------------------|--------------|
+
+
+  |POST |Create|	Retornos: 201/404/409
     - Cria/Insere uma nova informação.
   - GET  	: Read		Retornos: 200/404
     - Obtem/Pesquisa/Lista alguma informação.
