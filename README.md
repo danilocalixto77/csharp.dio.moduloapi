@@ -557,18 +557,24 @@
 ### Entendendo os verbos HTTP
 
 
-  |Http Verb | CRUD | Entire Collection | Specific item|
-  |----------|------|-------------------|--------------|
+  |Http Verb | CRUD        | Retornos    | 
+  |----------|-------------|-------------|
+  |POST      |Create       | 201/404/409 |
+  |----------|-------------|-------------|
+  |GET       |Read         | 200/404     |
+  |----------|-------------|-------------|
+  |PUT       |Update       | 405/200/409 |
+  |----------|-------------|-------------|
+  |PATCH     |Update/Modify| 405/200/409 |
+  |----------|-------------|-------------|
+  |DELETE    |Delete       | 405/200/404 |
+  |----------|-------------|-------------|
 
 
-  |POST |Create|	Retornos: 201/404/409
-    - Cria/Insere uma nova informação.
-  - GET  	: Read		Retornos: 200/404
-    - Obtem/Pesquisa/Lista alguma informação.
-  - PUT  	: Update	Retornos: 405/200/409
-    - Atualização de dados. Este verbo obriga atualizar/passar toda entidade.
+
+  
   - PATCH 	: Update/Modify Retornos: 405/200/409
-    - Atualização de dados. Este verbo permite atualizar toda atributos específicos da entidade.      - DELETE	: Delete        Retornos: 405/200/404
+    - Atualização de dados. Este verbo permite atualizar toda atributos específicos da entidade.      - : Delete        Retornos: 405/200/404
     - Apaga/Deleta um atributo/recurso.
 
 
