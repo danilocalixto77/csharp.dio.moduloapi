@@ -482,15 +482,25 @@
   ```
 
 ### Criando o endpoint obter por ID
-  - Inserir na classe ContatoController o método(endpoint) para pesquisar pelo id do contato.
-  - [HttpGet("{id}")]
 
+  Criaremos o método para **PesquisarPorId** dentro da classe Controller, conforme método a seguir, este método representa a consulta, pesquisa, e o verbo utilizado é o GET e nesse verbo do endpoint será passado o parâmetro Id.
 
+  ```
+  [HttpGet("{id}")]
+    public IActionResult PesquisaPorId(int id)
+    {
+        var contato = _context.Contatos.Find(id);
 
+        if (contato == null)
+            return NotFound();
 
+        return Ok(contato);
 
+  }
+  ```
 
-- Criando o endpoint de update
+### Criando o endpoint de update
+
   - Inserir na classe ContatoController o método(endpoint) para atualizar os dados do contato.
   - [HttpPut("{id}")]
 
