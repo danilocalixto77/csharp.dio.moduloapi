@@ -483,7 +483,7 @@
 
 ### Criando o endpoint obter por ID
 
-  Criaremos o método para **PesquisarPorId** dentro da classe Controller, conforme método a seguir, este método representa a consulta, pesquisa, e o verbo utilizado é o GET e nesse verbo do endpoint será passado o parâmetro Id.
+  Criaremos o método para **PesquisarPorId** dentro da classe Controller, conforme método a seguir, este método representa a select, consulta, pesquisa, e o verbo utilizado é o GET e nesse verbo do endpoint será passado o parâmetro Id.
 
   ```
   [HttpGet("{id}")]
@@ -501,14 +501,47 @@
 
 ### Criando o endpoint de update
 
-  - Inserir na classe ContatoController o método(endpoint) para atualizar os dados do contato.
-  - [HttpPut("{id}")]
+  Criamos o método para **Atualizar** dentro da classe Controller, esse método representa o update, na qual faz atualizações e alterações nos registros de contatos. O verbo utilizado é o PUT que também receberá um Id e mais as informações do contato que será alterado/atualizado.
 
-- Criando o endpoint de delete
-  - Inserir na classe ContatoController o método(endpoint) para atualizar os deletar o contato.
-  - [HttpDelete("{id}")]
+  ```
+  [HttpPut("{id}")]
+  public IActionResult Atualizar(int id, Contato contato)
+  {
+      var contatoBD = _context.Contatos.Find(id);
 
-- Criando o endpoint de obter por nome
+      if (contatoBD == null)
+          return NotFound();
+
+      contatoBD.Nome = contato.Nome;
+      contatoBD.Telefone = contato.Telefone;
+      contatoBD.Ativo = contato.Ativo;
+
+      _context.Contatos.Update(contatoBD);
+      _context.SaveChanges();
+
+      return Ok(contatoBD);
+  }
+  ```
+
+### Criando o método para **Deletar** dentro da classe ContatoController, esse método representa o delete, no qual é responsável por apagar os registros. O verbo delete.
+
+  ```
+  [HttpDelete("{id}")]
+  public IActionResult Deletar(int id)
+  {
+      var contatoBD = _context.Contatos.Find(id);
+
+      if (contatoBD == null)
+            return NotFound();
+
+      _context.Contatos.Remove(contatoBD);
+      _context.SaveChanges();
+
+      return NoContent();
+  }
+  ```
+
+### Criando o endpoint de obter por nome
   - Inserir na classe ContatoController o método(endpoint) para consultar pelo nome do contato.
   - [HttpGet("ObterPorNome")]
 
