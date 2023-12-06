@@ -481,20 +481,14 @@
   dotnet watch run
   ```
 
-
-
-
-
-
-
-
-
-
-
-
-- Criando o endpoint obter por ID
-  - Inserir na classe ContatoController o método(endpoint) para consultar pelo id do contato.
+### Criando o endpoint obter por ID
+  - Inserir na classe ContatoController o método(endpoint) para pesquisar pelo id do contato.
   - [HttpGet("{id}")]
+
+
+
+
+
 
 - Criando o endpoint de update
   - Inserir na classe ContatoController o método(endpoint) para atualizar os dados do contato.
