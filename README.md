@@ -560,23 +560,15 @@
   |Http Verb | CRUD        | Retornos    | 
   |----------|-------------|-------------|
   |POST      |Create       | 201/404/409 |
-  |----------|-------------|-------------|
   |GET       |Read         | 200/404     |
-  |----------|-------------|-------------|
   |PUT       |Update       | 405/200/409 |
-  |----------|-------------|-------------|
   |PATCH     |Update/Modify| 405/200/409 |
-  |----------|-------------|-------------|
   |DELETE    |Delete       | 405/200/404 |
-  |----------|-------------|-------------|
 
 
+- Recapitulando a construção da API
 
-  
-  - PATCH 	: Update/Modify Retornos: 405/200/409
-    - Atualização de dados. Este verbo permite atualizar toda atributos específicos da entidade.      - : Delete        Retornos: 405/200/404
-    - Apaga/Deleta um atributo/recurso.
-
+- Alterando o edpoint create
 
 ### Atribuição das Pastas no projeto:
 
