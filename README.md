@@ -379,6 +379,8 @@
   
   Após o comando acima foi criado o banco de dados **Agenda** e a tabela **Contatos** com todos os campos e tipos de acordo com a classe Contato.cs. Tudo através do Entity Framework.
 
+  As migrations geram dois comandos um **Up** e um **Down** um executa o comando incialmente e o outro desfaz. Exemplo se no Up eu tiver um Create table, no Down teremos uma Drop table.
+
 
 ### Criando a controle e o endpoint de Create
 
@@ -577,6 +579,10 @@
     3.1 Propriedades: a classe de contexto possui várias propriedasde dentre elas a **DbSet** que a partir dela poderemos chamar uma entidade para acessá-la. 
 
     3.2 A classe da pasta entidade tem que está declarada dentro do Contexto para que o sistema possa identifica-la como uma tabela.
+
+  4. Program.cs: aqui será declarado o **builder.Services** nesta declaração o AgendaContext passa o options recebendo a ConexaoPadrao configurada no .json. E aqui também diz qual o tipo do banco está sendo obtido.
+
+  5. Migrations: executando os comando de migrations com todos os passos devidamente executados corretamente, neste momento as migrations se encarregarão de gerar os arquivos scripts sql automaticamente.
 
 - Alterando o edpoint create
 
