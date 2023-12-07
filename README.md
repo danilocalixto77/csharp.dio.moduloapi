@@ -566,7 +566,17 @@
   |DELETE    |Delete       | 405/200/404 |
 
 
-- Recapitulando a construção da API
+### Recapitulando a construção da API
+
+  1. Conexão: a string de conexão é escrita no arquivo **appsettings.Development.json**.
+
+  2. Entidade: as entidade/tabelas são criadas a partir da pasta Entity com as classes nela existentes.
+
+  3. Contexto: criando contexto na pasta **Context**, na qual contem a classe que herdará de **DbContext** e fará o acesso ao banco de dados. A partir dela chamaremos para ela para fazer o acesso ao banco.
+
+    3.1 Propriedades: a classe de contexto possui várias propriedasde dentre elas a **DbSet** que a partir dela poderemos chamar uma entidade para acessá-la. 
+
+    3.2 A classe da pasta entidade tem que está declarada dentro do Contexto para que o sistema possa identifica-la como uma tabela.
 
 - Alterando o edpoint create
 
