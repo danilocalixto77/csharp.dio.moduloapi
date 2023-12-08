@@ -576,9 +576,9 @@
 
   3. Contexto: criando contexto na pasta **Context**, na qual contem a classe que herdará de **DbContext** e fará o acesso ao banco de dados. A partir dela chamaremos para ela para fazer o acesso ao banco.
 
-    3.1 Propriedades: a classe de contexto possui várias propriedasde dentre elas a **DbSet** que a partir dela poderemos chamar uma entidade para acessá-la. 
+  3.1 Propriedades: a classe de contexto possui várias propriedasde dentre elas a **DbSet** que a partir dela poderemos chamar uma entidade para acessá-la. 
 
-    3.2 A classe da pasta entidade tem que está declarada dentro do Contexto para que o sistema possa identifica-la como uma tabela.
+  3.2 A classe da pasta entidade tem que está declarada dentro do Contexto para que o sistema possa identifica-la como uma tabela.
 
   4. Program.cs: aqui será declarado o **builder.Services** nesta declaração o AgendaContext passa o options recebendo a ConexaoPadrao configurada no .json. E aqui também diz qual o tipo do banco está sendo obtido.
 
@@ -586,7 +586,9 @@
 
   6. Controllers: são o ponto de entrada por onde serão disponibilizados os métodos. Caracteristicas de uma controller. O NomeController.cs e a classe internamente irá herdar de **ControllerBase**. Terá os **[ApiController]** e **[Route("[controller]")]**. E via **constructor** recebe a classe de contexto que será atribuido internamente a uma variável **_conext = context;** isso se chama injeção de dependência.
 
-  7. 
+  7. Endpoints: dentro da classe controller teremos vários métodos que retornam um **IActionResult** (Um retorno Http). E dentro da classe há os verbos **Post, Get, Put e Delete**. Para todos esses verbos a exceção do Get necessitará usar um _context.SaveChanges().
+
+  8. Swagger: além de possibilitar testar a APi, também é uma ferramenta de documentação.
 
 - Alterando o endpoint create
 
