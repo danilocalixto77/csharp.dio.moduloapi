@@ -198,11 +198,11 @@
   Exemplo:
 
   ```
-  -- version 7.0.0
+  --version 7.0.0
   ```
 
   ```
-  dotnet add package Microsoft.EntityFrameworkCore.NOMEDOPACOTE -- version 7.0.0
+  dotnet add package Microsoft.EntityFrameworkCore.NOMEDOPACOTE --version 7.0.0
   ```
 
 
