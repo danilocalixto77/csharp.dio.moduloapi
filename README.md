@@ -584,7 +584,11 @@
 
   5. Migrations: executando os comando de migrations com todos os passos devidamente executados corretamente, neste momento as migrations se encarregarão de gerar os arquivos scripts sql automaticamente.
 
-- Alterando o edpoint create
+  6. Controllers: são o ponto de entrada por onde serão disponibilizados os métodos. Caracteristicas de uma controller. O NomeController.cs e a classe internamente irá herdar de **ControllerBase**. Terá os **[ApiController]** e **[Route("[controller]")]**. E via **constructor** recebe a classe de contexto que será atribuido internamente a uma variável **_conext = context;** isso se chama injeção de dependência.
+
+  7. 
+
+- Alterando o endpoint create
 
 ### Atribuição das Pastas no projeto:
 
