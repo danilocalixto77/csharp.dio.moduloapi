@@ -590,7 +590,21 @@
 
   8. Swagger: além de possibilitar testar a APi, também é uma ferramenta de documentação.
 
-- Alterando o endpoint create
+### Alterando o endpoint create
+  
+  Ajustando a forma de gravar com retorno da URL para pesquisa da informação gravada.
+
+  ```
+  [HttpPost]
+  public IActionResult Create(Contato contato)
+  {
+      _context.Add(contato);
+      _context.SaveChanges();
+      //Modificando return do método
+      //return Ok(contato);
+      return CreatedAtAction(nameof(PesquisaPorId), new { id = contato.Id }, contato);
+  }
+  ```
 
 ### Atribuição das Pastas no projeto:
 
